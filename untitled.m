@@ -1,4 +1,4 @@
-function varargout = gui(varargin)
+function varargout = untitled(varargin)
 % UNTITLED MATLAB code for untitled.fig
 %      UNTITLED, by itself, creates a new UNTITLED or raises the existing
 %      singleton*.
@@ -116,8 +116,6 @@ image = get(handles.InputImage,'String');
 image = strcat(image);
 textQ = get(handles.texto_matriz_Q,'String');
 textQ = strcat(textQ);
-textT = get(handles.texto_matriz_T,'String');
-textT = strcat(textT);
 textS = get(handles.texto_matriz_S,'String');
 textS = strcat(textS);
 if isempty(image)
@@ -126,14 +124,11 @@ elseif isempty(textQ) && isempty(textT)
     f = errordlg('No se han introducido los datos necesarios para desencriptar','No file error');
 elseif isempty(textQ)
     f = errordlg('No se ha introducido los datos de la matriz Q','No file error');
-elseif isempty(textT)
-    f = errordlg('No se ha introducido los datos de la matriz T','No file error');
 else
     image = load(image);
     Q = load(textQ);
-    T = load(textT);
     S = load(textS);
-    decryptedImage = decryptionBX(cell2mat(struct2cell(image)),cell2mat(struct2cell(T)),cell2mat(struct2cell(Q)),cell2mat(struct2cell(S)));
+    decryptedImage = decryptionBX(cell2mat(struct2cell(image)),cell2mat(struct2cell(Q)),cell2mat(struct2cell(S)));
     w = msgbox('Proceso completado','Éxito');
 end
 
