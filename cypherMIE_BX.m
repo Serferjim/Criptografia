@@ -89,7 +89,6 @@ for j=1: N
 end
 T = uint8(T);
 save('S.mat', 'S' );
-save('T.mat', 'T' );
 %Q generation and write in file
 Q = randi(255,M,N);
 Q = uint8(Q);
