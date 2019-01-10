@@ -1,7 +1,9 @@
-function decypherImage = decryptionBX(cypherImage,T,Q,S)
+function decypherImage = decryptionBX(cypherImage,Q,S)
 %ENCRYPTION_DECRYPTIONBX Summary of this function goes here
 %   Detailed explanation goes here
 [M,N,P] = size(cypherImage);
+T = zeros (M,N,P);
+T = uint8(T);
 decypherImage = zeros(M,N,P);
 
 for j = N:-1:1
