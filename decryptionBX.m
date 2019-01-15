@@ -5,7 +5,7 @@ function decypherImage = decryptionBX(cypherImage,Q,S)
 T = zeros (M,N,P);
 T = uint8(T);
 decypherImage = zeros(M,N,P);
-
+tic;
 for j = N:-1:1
     for i = M:-1:1
             if i == 1 && j == 1
@@ -30,6 +30,7 @@ for j=1:N
             decypherImage(r,c,:) = T(m,n,:);
     end
 end
+toc;
 decypherImage = uint8(decypherImage);
 save('decypherImage.mat','decypherImage');
 figure, image(decypherImage);
