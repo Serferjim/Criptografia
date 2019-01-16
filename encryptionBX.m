@@ -1,5 +1,5 @@
 function cypherImage = encryptionBX(T,Q)
-%ENCRYPTION_DECRYPTIONBX Summary of this function goes here
+%ENCRYPTIONBX Summary of this function goes here
 %   Detailed explanation goes here
 [M,N,P] = size(T);
 cypherImage = zeros(M,N,P);
