@@ -22,7 +22,7 @@ function varargout = untitled(varargin)
 
 % Edit the above text to modify the response to help untitled
 
-% Last Modified by GUIDE v2.5 09-Jan-2019 11:10:47
+% Last Modified by GUIDE v2.5 17-Jan-2019 16:00:37
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -128,7 +128,12 @@ else
     image = load(image);
     Q = load(textQ);
     S = load(textS);
-    decryptedImage = decryptionBX(cell2mat(struct2cell(image)),cell2mat(struct2cell(Q)),cell2mat(struct2cell(S)));
+    checkboxStatus = get(handles.usarMIE_MA,'Value');
+    if(checkboxStatus)
+        decryptionMA(cell2mat(struct2cell(image)),cell2mat(struct2cell(Q)),cell2mat(struct2cell(S)));
+    else
+        decryptionBX(cell2mat(struct2cell(image)),cell2mat(struct2cell(Q)),cell2mat(struct2cell(S)));
+    end
     w = msgbox('Proceso completado','Éxito');
 end
 
@@ -143,6 +148,20 @@ image = strcat(image);
 if isempty(image)
     f = errordlg('No se ha introducido una imagen','No file error');
 else
-    cypherMIE_BX(image);
+    checkboxStatus = get(handles.usarMIE_MA,'Value');
+    if(checkboxStatus)
+        cypherMIE_MA(image);
+    else
+        cypherMIE_BX(image);
+    end
     w = msgbox('Proceso completado','Éxito');
 end
+
+
+% --- Executes on button press in usarMIE_MA.
+function usarMIE_MA_Callback(hObject, eventdata, handles)
+% hObject    handle to usarMIE_MA (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of usarMIE_MA

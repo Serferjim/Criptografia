@@ -1,25 +1,25 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="3939383457" file="C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\CifradoMIEBX.prj" location="C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia" name="CifradoMIEBX" preferred-package-location="C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\CifradoMIEBX\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>CifradoMIEBX</param.appname>
+  <configuration file="C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\Ejecutable\CypherMIE_BX_MA.prj" location="C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\Ejecutable" name="CypherMIE_BX_MA" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>CypherMIE_BX_MA</param.appname>
     <param.icon />
     <param.icons />
-    <param.version>1.1</param.version>
-    <param.authnamewatermark>Sergio Fernánez Jiménez</param.authnamewatermark>
-    <param.email>serferjim1598753@gmail.com</param.email>
+    <param.version>1.5</param.version>
+    <param.authnamewatermark />
+    <param.email />
     <param.company />
     <param.summary />
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\CifradoMIEBX\</param.installpath.string>
+    <param.installpath.string>\CypherMIE_BX_MA\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>${PROJECT_ROOT}\CifradoMIEBX\for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}\CifradoMIEBX\for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}\CifradoMIEBX\for_redistribution</param.output>
-    <param.logdir>${PROJECT_ROOT}\CifradoMIEBX</param.logdir>
+    <param.intermediate>${PROJECT_ROOT}\CypherMIE_BX_MA\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\CypherMIE_BX_MA\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\CypherMIE_BX_MA\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\CypherMIE_BX_MA</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -40,6 +40,8 @@
     <unset>
       <param.icon />
       <param.icons />
+      <param.authnamewatermark />
+      <param.email />
       <param.company />
       <param.summary />
       <param.description />
@@ -72,19 +74,22 @@
       <param.help.text />
     </unset>
     <fileset.main>
-      <file>${PROJECT_ROOT}\untitled.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\untitled.m</file>
     </fileset.main>
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\cypherMIE_BX.m</file>
-      <file>${PROJECT_ROOT}\decryptionBX.m</file>
-      <file>${PROJECT_ROOT}\encryptionBX.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\cypherMIE_BX.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\cypherMIE_MA.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\decryptionBX.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\decryptionMA.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\encryptionBX.m</file>
+      <file>C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\encryptionMA.m</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\CifradoMIEBX\for_testing" name="CifradoMIEBX.exe" optional="false">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\CifradoMIEBX\for_testing\CifradoMIEBX.exe</file>
-      <file location="${PROJECT_ROOT}\CifradoMIEBX\for_testing" name="readme.txt" optional="true">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\CifradoMIEBX\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\CifradoMIEBX\for_testing" name="splash.png" optional="false">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\CifradoMIEBX\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\CypherMIE_BX_MA\for_testing" name="splash.png" optional="false">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\Ejecutable\CypherMIE_BX_MA\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\CypherMIE_BX_MA\for_testing" name="CypherMIE_BX_MA.exe" optional="false">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\Ejecutable\CypherMIE_BX_MA\for_testing\CypherMIE_BX_MA.exe</file>
+      <file location="${PROJECT_ROOT}\CypherMIE_BX_MA\for_testing" name="readme.txt" optional="true">C:\Users\nomad\Desktop\Cuarto Curso\Primer Cuatrimestre\Criptografia\Algoritmos para el trabajo\Criptografia\Ejecutable\CypherMIE_BX_MA\for_testing\readme.txt</file>
     </build-deliverables>
     <workflow />
     <matlab>

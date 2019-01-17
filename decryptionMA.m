@@ -7,6 +7,7 @@ T = uint8(T);
 decypherImage = zeros(M,N,P);
 decypherImage = uint8(decypherImage);
 F = 256;
+tic;
 for j = N:-1:1
     for i = M:-1:1
             if i == 1 && j == 1
@@ -35,6 +36,7 @@ for j=1:N
     end
 end
 decypherImage = uint8(decypherImage);
+toc;
 save('decypherImage.mat','decypherImage');
 figure, image(decypherImage);
 end
