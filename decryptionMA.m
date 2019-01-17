@@ -1,19 +1,26 @@
-function cypherImage = decryptionMA(cypherImage,Q,S)
-%DECRYPTIONMA Summary of this function goes here
+function decypherImage = decryptionMA(cypherImage,Q,S)
+%ENCRYPTION_DECRYPTIONBX Summary of this function goes here
 %   Detailed explanation goes here
 [M,N,P] = size(cypherImage);
 T = zeros (M,N,P);
 T = uint8(T);
 decypherImage = zeros(M,N,P);
-tic;
+decypherImage = uint8(decypherImage);
+F = 256;
 for j = N:-1:1
     for i = M:-1:1
             if i == 1 && j == 1
-                T(i,j,:) = mod(cypherImage(i,j,:) - T(M,N,:) - Q(i,j), 255);
+                number = int16(cypherImage(i,j,:)) - int16(T(M,N,:)) - int16(Q(i,j));
+                numeroFinal = mod(number,F);
+                T(i,j,:) = uint8(numeroFinal);
             elseif i == 1 && j ~= 1
-                T(i,j,:) = mod(cypherImage(i,j,:) - cypherImage(M,j-i,:) - Q(i,j), 255);
+                 number2 = int16(cypherImage(i,j,:)) - int16(cypherImage(M,j-1,:)) - int16(Q(i,j));
+                 numeroFinal2 = mod(number2,F);
+                T(i,j,:) = uint8(numeroFinal2);
             else
-                T(i,j,:) = mod(cypherImage(i,j,:) - cypherImage(i-1,j,:) - Q(i,j), 255);
+                number3 = int16(cypherImage(i,j,:)) - int16(cypherImage(i-1,j,:)) - int16(Q(i,j));
+                numeroFinal3 = mod(number3,F);
+                T(i,j,:) = uint8(numeroFinal3);
             end
     end
 end
@@ -27,7 +34,6 @@ for j=1:N
             decypherImage(r,c,:) = T(m,n,:);
     end
 end
-toc;
 decypherImage = uint8(decypherImage);
 save('decypherImage.mat','decypherImage');
 figure, image(decypherImage);
